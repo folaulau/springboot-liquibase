@@ -53,3 +53,19 @@ databaseChangeLog:
               - column:
                   name: age
                   value: 5
+  - changeSet:
+       id: 4
+       author: folau
+       changes:
+         - insert:
+             tableName: user
+             columns:
+               - column:
+                   name: name
+                   value: Lisa Kaveinga
+               - column:
+                   name: email
+                   value: lisa@gmail.com
+               - column:
+                   name: age
+                   value: 21
