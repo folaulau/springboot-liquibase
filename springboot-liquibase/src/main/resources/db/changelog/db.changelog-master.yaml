@@ -1,0 +1,55 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: folau
+      changes:
+        - createTable:
+            tableName: user
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: email
+                  type: varchar(255)
+              - column:
+                  name: name
+                  type: varchar(255)
+              - column:
+                  name: age
+                  type: int
+  - changeSet:
+      id: 2
+      author: folau
+      changes:
+        - insert:
+            tableName: user
+            columns:
+              - column:
+                  name: name
+                  value: Folau Kaveinga
+              - column:
+                  name: email
+                  value: folaudev@gmail.com
+              - column:
+                  name: age
+                  value: 32
+  - changeSet:
+      id: 3
+      author: folau
+      changes:
+        - insert:
+            tableName: user
+            columns:
+              - column:
+                  name: name
+                  value: King Kaveinga
+              - column:
+                  name: email
+                  value: King@gmail.com
+              - column:
+                  name: age
+                  value: 5
